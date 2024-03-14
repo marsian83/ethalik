@@ -9,6 +9,11 @@
   src: url("../fonts/Goodzillaz.otf");
 }
 
+@font-face {
+  font-family: "Ethalik";
+  src: url("../fonts/ethalik.woff");
+}
+
 @keyframes tumble {
   from {
     transform: rotate(0deg);

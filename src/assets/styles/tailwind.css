@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-background text-front font-goodzillaz scroll-smooth;
+    @apply bg-background text-front font-ethalik scroll-smooth;
   }
 
   body {

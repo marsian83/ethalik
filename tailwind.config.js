@@ -25,6 +25,7 @@ export default {
         poppins: '"Poppins", sans-serif',
         raleway: '"Raleway", sans-serif',
         goodzillaz: '"Goodzillas", sans-serif',
+        ethalik: '"Ethalik", sans-serif',
       },
       zIndex: {
         1: 1,
