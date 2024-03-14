@@ -12,7 +12,9 @@ export default function Navbar() {
 
       <div className="flex text-[2vw] gap-x-[5vw]">
         <button>how to buy</button>
-        <button className="bg-foreground px-[5vw] rounded-xl">BUY</button>
+        <button className="bg-foreground px-[5vw] rounded-xl duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1">
+          BUY
+        </button>
       </div>
     </nav>
   );

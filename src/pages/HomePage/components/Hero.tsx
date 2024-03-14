@@ -7,19 +7,14 @@ export default function Hero() {
   const [tumblers, setTumblers] = useState<Array<React.ReactNode>>([]);
 
   useEffect(() => {
-    if (!timer.current)
-      timer.current = setInterval(() => {
-        setTumblers((p) => [...p, <Tumbler />]);
-      }, 1000);
+    timer.current = setInterval(() => {
+      setTumblers((p) => [...p, <Tumbler />]);
+    }, 1000);
 
     return () => {
       clearInterval(timer.current);
     };
   }, []);
-
-  useEffect(() => {
-    if (tumblers.length > 60) setTumblers([]);
-  }, [tumblers]);
 
   return (
     <section className="h-screen flex flex-col p-page-lg relative overflow-hidden">
@@ -32,10 +27,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="">
-          <img
-            src="/images/ICON-hd.png"
-            className="h-full object-contain py-[3vh]"
-          />
+          <img src="/images/ICON-hd.png" className="h-full object-contain" />
         </div>
 
         <div className="absolute-cover -z-1">{tumblers}</div>
