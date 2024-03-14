@@ -16,6 +16,9 @@
   .p-page {
     @apply px-[5vw];
   }
+  .p-page-lg {
+    @apply px-[10vw];
+  }
 
   .absolute-cover {
     @apply absolute top-0 left-0 w-full h-full;
