@@ -1,0 +1,28 @@
+@property --property-name {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #c0ffee;
+}
+
+@font-face {
+  font-family: "Goodzillas";
+  src: url("../fonts/Goodzillaz.otf");
+}
+
+@keyframes tumble {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes absolute-l2r {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 200%;
+  }
+}
