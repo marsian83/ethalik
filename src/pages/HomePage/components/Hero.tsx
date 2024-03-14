@@ -2,18 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const timer = useRef<NodeJS.Timeout>();
+  const [seed, setSeed] = useState(1);
 
-  const [tumblers, setTumblers] = useState<Array<React.ReactNode>>([]);
+  function reset() {
+    setSeed(Math.random());
+  }
 
   useEffect(() => {
-    timer.current = setInterval(() => {
-      setTumblers((p) => [...p, <Tumbler />]);
-    }, 1000);
-
-    return () => {
-      clearInterval(timer.current);
-    };
+    setInterval(() => {
+      reset();
+    }, 20000);
   }, []);
 
   return (
@@ -30,7 +28,31 @@ export default function Hero() {
           <img src="/images/ICON-hd.png" className="h-full object-contain" />
         </div>
 
-        <div className="absolute-cover -z-1">{tumblers}</div>
+        <div className="absolute-cover -z-1" key={seed}>
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+        </div>
       </div>
 
       <div className="flex font-poppins font-extrabold gap-x-20 items-center text-lg">
@@ -63,9 +85,15 @@ function Tumbler() {
   ];
   const img = array[Math.floor(Math.random() * array.length)];
 
-  const anim = `tumble ${
-    1000 + Math.random() * 7000
-  }ms infinite linear, absolute-l2r ${3500 + 8500 * Math.random()}ms linear`;
+  const [flag, setFlag] = useState(false);
+
+  const anim = `tumble ${1000 + Math.random() * 7000}ms infinite linear`;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFlag(true);
+    }, 10000 * Math.random());
+  }, []);
 
   return (
     <img
@@ -75,6 +103,8 @@ function Tumbler() {
         animation: anim,
         width: `${5 + Math.random() * 10}vw`,
         top: `${Math.random() * 100}%`,
+        transitionDuration: `${3500 + 15500 * Math.random()}ms`,
+        left: `${flag ? 200 : -50}%`,
       }}
     />
   );
