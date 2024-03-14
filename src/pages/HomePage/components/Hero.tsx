@@ -8,7 +8,7 @@ export default function Hero() {
   useEffect(() => {
     if (!timer.current)
       timer.current = setInterval(() => {
-        if (tumblers.length > 200) setTumblers([]);
+        if (tumblers.length > 60) return setTumblers([]);
 
         setTumblers((p) => [...p, <Tumbler />]);
       }, 1000);
