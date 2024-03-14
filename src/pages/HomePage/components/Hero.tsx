@@ -8,13 +8,15 @@ export default function Hero() {
   useEffect(() => {
     if (!timer.current)
       timer.current = setInterval(() => {
-        if (tumblers.length > 60) return setTumblers([]);
-
         setTumblers((p) => [...p, <Tumbler />]);
       }, 1000);
 
     return () => clearInterval(timer.current);
   }, []);
+
+  useEffect(() => {
+    if (tumblers.length > 60) setTumblers([]);
+  }, [tumblers]);
 
   return (
     <section className="h-screen flex justify-between p-page relative overflow-hidden">
