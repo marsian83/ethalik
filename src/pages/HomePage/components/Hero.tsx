@@ -12,6 +12,8 @@ export default function Hero() {
 
         setTumblers((p) => [...p, <Tumbler />]);
       }, 1000);
+
+    return () => clearInterval(timer.current);
   }, []);
 
   return (
