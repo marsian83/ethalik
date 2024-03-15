@@ -22,6 +22,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes float {
+  from {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 
 @keyframes absolute-l2r {
   from {

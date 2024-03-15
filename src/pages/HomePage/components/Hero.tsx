@@ -11,24 +11,48 @@ export default function Hero() {
   useEffect(() => {
     setInterval(() => {
       reset();
-    }, 20000);
+    }, 15000);
   }, []);
 
   return (
     <section className="h-screen flex flex-col p-page-lg relative overflow-hidden">
       <div className="flex">
-        <div className="flex flex-col gap-y-10 items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center">
           <h1 className="text-7xl">Vutaleek Beetrootin</h1>
-          <p className="text-center text-2xl">
+          <p className="text-center text-2xl mt-10 mb-5">
             Vutaleek is a valorous sir and that gent shall restore peace and
             order on eth'reum
           </p>
+
+          <button className="bg-foreground px-12 py-5 rounded-full tracking-widest">
+            0xcE7ceFc488dC178680af0D0f484356d27CB89725
+          </button>
         </div>
         <div className="">
           <img src="/images/ICON-hd.png" className="h-full object-contain" />
         </div>
 
-        <div className="absolute-cover -z-1" key={seed}>
+        <div className="absolute-cover -z-1 select-none" key={seed}>
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
+          <Tumbler />
           <Tumbler />
           <Tumbler />
           <Tumbler />
@@ -82,12 +106,18 @@ function Tumbler() {
   const array = [
     "/images/tumblers/write-vitalik.png",
     "/images/tumblers/VITALIK-note-eyeless.jpg",
+    "/images/tumblers/vitalik-self.png",
+    "/images/tumblers/eyeseyes.png",
+    "/images/tumblers/hathat.png",
   ];
   const img = array[Math.floor(Math.random() * array.length)];
 
   const [flag, setFlag] = useState(false);
 
-  const anim = `tumble ${1000 + Math.random() * 7000}ms infinite linear`;
+  const anim =
+    Math.random() < 0.5
+      ? `tumble ${1000 + Math.random() * 7000}ms infinite linear`
+      : `float ${3000 + Math.random() * 2000}ms infinite`;
 
   useEffect(() => {
     setTimeout(() => {
@@ -103,7 +133,7 @@ function Tumbler() {
         animation: anim,
         width: `${5 + Math.random() * 10}vw`,
         top: `${Math.random() * 100}%`,
-        transitionDuration: `${3500 + 15500 * Math.random()}ms`,
+        transitionDuration: `${5500 + 15500 * Math.random()}ms`,
         left: `${flag ? 200 : -50}%`,
       }}
     />
