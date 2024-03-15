@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="p-page py-3 flex gap-x-3">
       <Link to="/" className="text-[4vw] flex gap-x-5 items-center">
-        <img src="/images/ICON-hd.png" className="h-[1.5em]" />
+        <img src="/images/ICON-hd.webp" className="h-[1.5em]" />
         <h1 className="">$ETHALIK</h1>
       </Link>
 

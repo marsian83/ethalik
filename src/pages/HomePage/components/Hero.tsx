@@ -29,7 +29,7 @@ export default function Hero() {
           </button>
         </div>
         <div className="">
-          <img src="/images/ICON-hd.png" className="h-full object-contain" />
+          <img src="/images/ICON-hd.webp" className="h-full object-contain" />
         </div>
 
         <div className="absolute-cover -z-1 select-none" key={seed}>
@@ -104,11 +104,11 @@ export default function Hero() {
 
 function Tumbler() {
   const array = [
-    "/images/tumblers/write-vitalik.png",
-    "/images/tumblers/VITALIK-note-eyeless.jpg",
-    "/images/tumblers/vitalik-self.png",
-    "/images/tumblers/eyeseyes.png",
-    "/images/tumblers/hathat.png",
+    "/images/tumblers/1.webp",
+    "/images/tumblers/2.webp",
+    "/images/tumblers/3.webp",
+    "/images/tumblers/4.webp",
+    "/images/tumblers/5.webp",
   ];
   const img = array[Math.floor(Math.random() * array.length)];
 
